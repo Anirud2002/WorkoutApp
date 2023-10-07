@@ -21,19 +21,8 @@
     <ion-col size="10">
       <div class="contribution-graph">
         <!-- Generate your grid here using JavaScript -->
-        <div class="week-container" *ngFor="let cube of [].constructor(numWeeks)">
-          <div class="cube active"></div>
-          <div class="cube"></div>
-          <div class="cube"></div>
-          <div class="cube active"></div>
-          <div class="cube active"></div>
-          <div class="cube"></div>
-          <div class="cube"></div>
-        </div>
-      
-        <!-- IF THERE ARE REMAINING CUBES -->
-        <div class="week-container">
-          <div class="cube" *ngFor="let cube of [].constructor(remainingDays)"></div>
+        <div class="week-container" *ngFor="let cube of cubes; let i = index">
+          <div *ngFor="let unit of cube" [class]="'cube ' + (unit.isActive ? 'active' : '')" (click)="showCubeDetails(unit, $event)"></div>
         </div>
       </div>
     </ion-col>

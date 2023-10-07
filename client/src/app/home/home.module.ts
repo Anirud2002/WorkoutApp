@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
@@ -10,6 +10,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FoodCardComponent } from './components/food-card/food-card.component';
 import { WorkoutCardComponent } from './components/workout-card/workout-card.component';
 import { StreakComponent } from './components/streak/streak.component';
+import { StreakPopoverComponent } from './components/streak-popover/streak-popover.component';
 
 @NgModule({
   imports: [
@@ -27,6 +28,7 @@ import { StreakComponent } from './components/streak/streak.component';
       animationDuration: 300,
     })
   ],
-  declarations: [HomePage, FoodCardComponent, WorkoutCardComponent, StreakComponent]
+  declarations: [HomePage, FoodCardComponent, WorkoutCardComponent, StreakComponent, StreakPopoverComponent],
+  providers: [DatePipe]
 })
 export class HomePageModule {}
