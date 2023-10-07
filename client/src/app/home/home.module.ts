@@ -9,6 +9,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FoodCardComponent } from './components/food-card/food-card.component';
 import { WorkoutCardComponent } from './components/workout-card/workout-card.component';
+import { StreakComponent } from './components/streak/streak.component';
 
 @NgModule({
   imports: [
@@ -26,6 +27,6 @@ import { WorkoutCardComponent } from './components/workout-card/workout-card.com
       animationDuration: 300,
     })
   ],
-  declarations: [HomePage, FoodCardComponent, WorkoutCardComponent]
+  declarations: [HomePage, FoodCardComponent, WorkoutCardComponent, StreakComponent]
 })
 export class HomePageModule {}

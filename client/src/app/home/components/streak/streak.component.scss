@@ -1,0 +1,32 @@
+ion-grid {
+    ion-row{
+        ion-col {
+            .contribution-graph {
+                display: flex;
+                justify-content: space-around;
+                border-radius: 1px;
+                overflow-x: scroll;
+                .week-container {
+                    
+                    .cube {
+                        width: 15px;
+                        height: 15px;
+                        margin-bottom: 1px;
+                        margin-right: 1px;
+                        background-color: rgb(146, 146, 146);
+                        border-radius: 2px;
+                    }
+                    
+                    .active {
+                        background-color: rgba(46, 138, 153, 1);
+                    }
+                    
+                    .hovered {
+                        background-color: #2ea44f;
+                    }
+                }
+            }
+        }
+    }
+}
+
