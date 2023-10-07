@@ -1,0 +1,42 @@
+ion-item.workout {
+    --background: var(--ion-color-secondary);
+}
+
+ion-card {
+
+    ion-card-header {
+        ion-segment {
+            color: white;
+        }
+    }
+
+    ion-card-content {
+        .contribution-graph {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            border-radius: 1px;
+            overflow-x: scroll;
+        }
+
+        
+        .day {
+            width: 20px;
+            height: 20px;
+            margin-bottom: 1px;
+            margin-right: 1px;
+            background-color: rgb(146, 146, 146);
+            border-radius: 1px;
+        }
+        
+        .active {
+            background-color: rgba(46, 138, 153, 1);
+        }
+        
+        .hovered {
+            background-color: #2ea44f;
+        }
+        
+    }
+
+}

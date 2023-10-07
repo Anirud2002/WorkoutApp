@@ -8,6 +8,7 @@ import { HomePageRoutingModule } from './home-routing.module';
 // Import ng-circle-progress
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FoodCardComponent } from './components/food-card/food-card.component';
+import { WorkoutCardComponent } from './components/workout-card/workout-card.component';
 
 @NgModule({
   imports: [
@@ -25,6 +26,6 @@ import { FoodCardComponent } from './components/food-card/food-card.component';
       animationDuration: 300,
     })
   ],
-  declarations: [HomePage, FoodCardComponent]
+  declarations: [HomePage, FoodCardComponent, WorkoutCardComponent]
 })
 export class HomePageModule {}
