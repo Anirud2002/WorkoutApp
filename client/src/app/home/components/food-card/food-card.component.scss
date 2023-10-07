@@ -1,0 +1,16 @@
+ion-card {
+    position: relative;
+    ion-list{
+        height: auto;
+        max-height: 100px;
+        overflow-y: scroll;
+    
+        ion-item-divider {
+            --background: var(--ion-color-light);
+        }
+    }
+}
+
+ion-item.food {
+    --background: var(--ion-color-secondary);
+}
