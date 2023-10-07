@@ -5,11 +5,13 @@
 
   <ion-button size="small" color="primary" fill="clear" slot="end">Add +</ion-button>
 </ion-item>
+
 <ion-card class="ion-no-margin" button>
   <ion-card-content class="ion-no-padding">
     <ion-grid>
       <ion-row class="ion-align-items-center">
         <ion-col size="5">
+
           <circle-progress
             [percent]="85"
             [radius]="50"
@@ -25,20 +27,24 @@
             [animation]="true"
             [animationDuration]="300"
           ></circle-progress>
+          
         </ion-col>
+
         <ion-col size="7">
+
           <ion-list>
-            <ion-item-group>
-              <ion-item-divider class="ion-no-padding" sticky="true">
-                <ion-text class="text-sm">Logged food</ion-text>
-              </ion-item-divider>
-              <ion-item class="ion-no-padding" *ngFor="let food of [1, 2, 3, 4, 5]; let i = index; let last = last" [lines]="last && 'none'">
-                <ion-label>
-                  <p>{{i + 1}}. Protein shake</p>
-                </ion-label>
-              </ion-item>
-            </ion-item-group>
+            <ion-item-divider class="ion-no-padding" sticky="true">
+              <ion-text class="text-sm">Logged food</ion-text>
+            </ion-item-divider>
+
+            <ion-item class="ion-no-padding" *ngFor="let food of [1, 2, 3, 4, 5]; let i = index; let last = last" [lines]="last && 'none'">
+              <ion-label>
+                <p>{{i + 1}}. Protein shake</p>
+              </ion-label>
+            </ion-item>
+
           </ion-list>
+
         </ion-col>
       </ion-row>
     </ion-grid>
