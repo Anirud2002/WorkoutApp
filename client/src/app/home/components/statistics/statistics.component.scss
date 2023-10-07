@@ -1,0 +1,12 @@
+ion-item.workout {
+    --background: var(--ion-color-secondary);
+}
+
+ion-card {
+
+    ion-card-header {
+        ion-segment {
+            color: var(--ion-color-dark);
+        }
+    }
+}

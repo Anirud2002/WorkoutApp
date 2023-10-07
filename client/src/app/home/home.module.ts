@@ -11,6 +11,7 @@ import { FoodCardComponent } from './components/food-card/food-card.component';
 import { WorkoutCardComponent } from './components/workout-card/workout-card.component';
 import { StreakComponent } from './components/streak/streak.component';
 import { StreakPopoverComponent } from './components/streak-popover/streak-popover.component';
+import { StatisticsComponent } from './components/statistics/statistics.component';
 
 @NgModule({
   imports: [
@@ -18,9 +19,7 @@ import { StreakPopoverComponent } from './components/streak-popover/streak-popov
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    // Specify ng-circle-progress as an import
     NgCircleProgressModule.forRoot({
-      // set defaults here
       radius: 100,
       outerStrokeWidth: 16,
       outerStrokeColor: "#78C000",
@@ -28,7 +27,14 @@ import { StreakPopoverComponent } from './components/streak-popover/streak-popov
       animationDuration: 300,
     })
   ],
-  declarations: [HomePage, FoodCardComponent, WorkoutCardComponent, StreakComponent, StreakPopoverComponent],
+  declarations: [
+    HomePage, 
+    FoodCardComponent, 
+    WorkoutCardComponent, 
+    StreakComponent, 
+    StreakPopoverComponent, 
+    StatisticsComponent
+  ],
   providers: [DatePipe]
 })
 export class HomePageModule {}
