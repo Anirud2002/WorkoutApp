@@ -1,23 +1,53 @@
 <ion-item class="font-medium mt-4 workout ion-no-padding ion-no-margin" lines="none">
   <ion-label>
-    <ion-text>Statistics</ion-text>
+    <ion-text>Workout</ion-text>
   </ion-label>
 </ion-item>
 
-<ion-card class="ion-no-margin">
+
+<ion-card class="ion-no-margin exercise relative">
+  <div class="w-full top-4 absolute flex justify-end">
+    <ion-fab>
+      <ion-fab-button size="small" color="tertiary">
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </div>
 
   <ion-card-header>
-    <ion-segment value="streak">
-      <ion-segment-button value="streak">
-        <ion-label>Streak</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="chart">
-        <ion-label>Chart</ion-label>
-      </ion-segment-button>
-    </ion-segment>
+    <ion-card-title class="text-lg">Bench Press</ion-card-title>
+    <ion-card-subtitle>Current Exercise:</ion-card-subtitle>
   </ion-card-header>
 
   <ion-card-content>
-    <app-streak></app-streak>
+    <ion-list>
+      <ion-text>Sets</ion-text>
+      <ion-item class="ion-no-padding" *ngFor="let set of [1, 2, 3, 4]; let i = index; let last = last" [lines]="last && 'none'" button detail="false">
+        <ion-label class="ion-text-wrap">
+            <p>
+              120lbs
+            </p>
+        </ion-label>
+        <ion-text slot="end">
+          13 reps
+        </ion-text>
+      </ion-item>
+    </ion-list>
   </ion-card-content>
+
 </ion-card>
+
+<ion-grid class="ion-no-padding ion-no-margin ">
+  <ion-row class="flex space-x-2 justify-center">
+    <ion-col size="5">
+      <ion-card button class="ion-no-margin ion-margin-vertical" color="tertiary">
+        <ion-card-content></ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size="5">
+      <ion-card button class="ion-no-margin ion-margin-vertical" color="primary">
+        <ion-card-content></ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>

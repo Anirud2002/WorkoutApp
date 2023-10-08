@@ -1,0 +1,13 @@
+ion-item.workout {
+    --background: var(--ion-color-secondary);
+}
+
+
+ion-card {
+    
+    ion-list {
+        height: auto;
+        max-height: 200px;
+        overflow-y: scroll;
+    }
+}

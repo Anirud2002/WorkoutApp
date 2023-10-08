@@ -48,7 +48,7 @@ export class StreakComponent  implements OnInit {
     for(let i = 0; i < this.numWeeks; i++) {
       this.cubes[i] = [];
       for(let j = 0; j < 7; j++) {
-        date = new Date(this.selectedYear, this.selectedMonth, dayNumber);
+        date = new Date(this.selectedYear, this.selectedMonth - 1, dayNumber);
         this.cubes[i][j] = {
           title: this.datePipe.transform(date, 'MMM d, y') ?? '',
           isActive: (i + j) % 3 === 0 // FIX ME
@@ -62,7 +62,7 @@ export class StreakComponent  implements OnInit {
     this.cubes[lastIdx] = [];
     
     for(let i = 0; i < this.remainingDays; i++) {
-      date = new Date(this.selectedYear, this.selectedMonth, dayNumber);
+      date = new Date(this.selectedYear, this.selectedMonth - 1, dayNumber);
       this.cubes[lastIdx][i] = {
         title: this.datePipe.transform(date, 'MMM d, y') ?? '',
         isActive: false
