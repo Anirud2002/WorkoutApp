@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule, DatePipe } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
@@ -12,12 +12,14 @@ import { WorkoutCardComponent } from './components/workout-card/workout-card.com
 import { StreakComponent } from './components/streak/streak.component';
 import { StreakPopoverComponent } from './components/streak-popover/streak-popover.component';
 import { StatisticsComponent } from './components/statistics/statistics.component';
+import { AddSetPopoverComponent } from './components/add-set-popover/add-set-popover.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
+    ReactiveFormsModule,
     HomePageRoutingModule,
     NgCircleProgressModule.forRoot({
       radius: 100,
@@ -33,7 +35,8 @@ import { StatisticsComponent } from './components/statistics/statistics.componen
     WorkoutCardComponent, 
     StreakComponent, 
     StreakPopoverComponent, 
-    StatisticsComponent
+    StatisticsComponent,
+    AddSetPopoverComponent
   ],
   providers: [DatePipe]
 })
