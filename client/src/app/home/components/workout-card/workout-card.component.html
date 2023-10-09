@@ -40,14 +40,18 @@
 <ion-grid class="ion-no-padding ion-no-margin ">
   <ion-row class="flex space-x-2 justify-center">
     <ion-col size="5">
-      <ion-card button class="ion-no-margin ion-margin-vertical" color="tertiary">
-        <ion-card-content></ion-card-content>
-      </ion-card>
+      <ion-button expand="block" class="ion-margin-vertical" color="tertiary">
+        <ion-icon name="play" slot="start"></ion-icon>
+        <ion-text slot="end">
+          4:00 <small>min</small>
+        </ion-text>
+      </ion-button>
     </ion-col>
     <ion-col size="5">
-      <ion-card button class="ion-no-margin ion-margin-vertical" color="primary">
-        <ion-card-content></ion-card-content>
-      </ion-card>
+      <ion-button expand="block" class="ion-margin-vertical">
+        Next exercise
+        <ion-icon name="play-forward" slot="end"></ion-icon>
+      </ion-button>
     </ion-col>
   </ion-row>
 </ion-grid>
