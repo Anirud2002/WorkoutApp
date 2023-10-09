@@ -90,11 +90,6 @@
   ion-item, ion-card {
     --background: var(--ion-color-light);
   }
-
-  /* ion-text */ 
-  ion-text {
-    color: var(--ion-color-primary);
-  }
 }
 
 @media (prefers-color-scheme: dark) {
