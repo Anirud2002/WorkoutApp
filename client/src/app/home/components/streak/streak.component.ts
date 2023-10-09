@@ -107,6 +107,7 @@ export class StreakComponent  implements OnInit {
         cube
       },
       event: e,
+      showBackdrop: false,
       mode: 'ios',
       side: 'bottom',
       alignment: 'center',

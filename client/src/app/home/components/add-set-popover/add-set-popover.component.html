@@ -1,19 +1,17 @@
-<ion-card>
-  <form [formGroup]="setForm">
-    <ion-item class="ion-no-padding">
-      <ion-label position="stacked">
-        <p>Weight:</p>
-      </ion-label>
+<form [formGroup]="setForm">
+  <ion-item>
+    <ion-label position="stacked">
+      <p>Weight:</p>
+    </ion-label>
 
-      <ion-input type="number" formControlName="weight"></ion-input>
-    </ion-item>
-    <ion-item class="ion-no-padding">
-      <ion-label position="stacked">
-        <p>Reps:</p>
-      </ion-label>
+    <ion-input type="number" formControlName="weight"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">
+      <p>Reps:</p>
+    </ion-label>
 
-      <ion-input type="number" formControlName="reps"></ion-input>
-    </ion-item>
-    <ion-button expand="block" [disabled]="setForm.invalid">Save</ion-button>
-  </form>
-</ion-card>
+    <ion-input type="number" formControlName="reps"></ion-input>
+  </ion-item>
+  <ion-button class="ion-margin-horizontal" expand="block" [disabled]="setForm.invalid">Save</ion-button>
+</form>
