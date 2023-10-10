@@ -13,6 +13,8 @@ import { StreakComponent } from './components/streak/streak.component';
 import { StreakPopoverComponent } from './components/streak-popover/streak-popover.component';
 import { StatisticsComponent } from './components/statistics/statistics.component';
 import { AddSetPopoverComponent } from './components/add-set-popover/add-set-popover.component';
+import { WorkoutChartComponent } from './components/workout-chart/workout-chart.component';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   imports: [
@@ -27,7 +29,8 @@ import { AddSetPopoverComponent } from './components/add-set-popover/add-set-pop
       outerStrokeColor: "#78C000",
       innerStrokeColor: "#C7E596",
       animationDuration: 300,
-    })
+    }),
+    NgChartsModule
   ],
   declarations: [
     HomePage, 
@@ -36,7 +39,8 @@ import { AddSetPopoverComponent } from './components/add-set-popover/add-set-pop
     StreakComponent, 
     StreakPopoverComponent, 
     StatisticsComponent,
-    AddSetPopoverComponent
+    AddSetPopoverComponent,
+    WorkoutChartComponent
   ],
   providers: [DatePipe]
 })

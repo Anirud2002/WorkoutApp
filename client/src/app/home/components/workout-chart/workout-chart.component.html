@@ -1,0 +1,19 @@
+<!-- DATE TIME PICKER (MONTH / YEAR) -->
+<ion-item class="ion-no-padding mb-2" lines="none">
+  <ion-datetime-button datetime="datetime" slot="start"></ion-datetime-button>
+  <ion-popover [keepContentsMounted]="true">
+    <ng-template>
+      <!-- <ion-datetime id="datetime" presentation="month-year" (ionChange)="handleDates($event)"></ion-datetime> -->
+      <ion-datetime id="datetime" presentation="year"></ion-datetime>
+    </ng-template>
+  </ion-popover>
+</ion-item>
+
+<div style="display: block;">
+  <canvas baseChart width="400" height="400"
+    [type]="'line'"
+    [data]="lineChartData"
+    [options]="lineChartOptions"
+    [legend]="false">
+  </canvas>
+</div>
