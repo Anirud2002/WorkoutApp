@@ -7,14 +7,28 @@ import { IonicModule } from '@ionic/angular';
 import { FoodPageRoutingModule } from './food-routing.module';
 
 import { FoodPage } from './food.page';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { LoggedFoodComponent } from './components/logged-food/logged-food.component';
+import { FoodStatsComponent } from './components/food-stats/food-stats.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    FoodPageRoutingModule
+    FoodPageRoutingModule,
+    NgCircleProgressModule.forRoot({
+      radius: 100,
+      outerStrokeWidth: 16,
+      outerStrokeColor: "#78C000",
+      innerStrokeColor: "#C7E596",
+      animationDuration: 300,
+    })
   ],
-  declarations: [FoodPage]
+  declarations: [
+    FoodPage, 
+    LoggedFoodComponent, 
+    FoodStatsComponent
+  ]
 })
 export class FoodPageModule {}

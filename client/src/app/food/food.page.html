@@ -1,24 +1,50 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button color="secondary"></ion-back-button>
+      <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
     <ion-title>Food</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <!-- <ion-header collapse="condense">
+  <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-back-button color="tertiary"></ion-back-button>
-      </ion-buttons>
       <ion-title size="large">Food</ion-title>
     </ion-toolbar>
-  </ion-header> -->
+  </ion-header>
 
-  <div class="container w-full h-full rounded-t-3xl ion-padding">
+  <div class="container w-full min-h-full rounded-t-3xl ion-padding">
+
+    <ion-grid>
+      <ion-row>
+        <ion-col class="flex justify-center">
+          <circle-progress
+            [percent]="85"
+            [radius]="70"
+            [units]="' cal'"
+            [unitsFontSize]="'14'"
+            [title]="'1973'"
+            [titleColor]="'#ffffff'"
+            [titleFontSize]="'24'"
+            [subtitle]="'completed'"
+            [subtitleFontSize]="'16'"
+            [outerStrokeWidth]="12"
+            [innerStrokeWidth]="0"
+            [outerStrokeColor]="'#2E8A99'"
+            [innerStrokeColor]="'#C7E596'"
+            [animation]="true"
+            [animationDuration]="300"
+          ></circle-progress>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
     
-    
+    <!-- Logged food card -->
+    <app-logged-food></app-logged-food>
+
+    <!-- Food stats card -->
+    <app-food-stats></app-food-stats>
+
   </div>
 </ion-content>
