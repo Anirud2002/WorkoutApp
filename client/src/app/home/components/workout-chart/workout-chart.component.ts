@@ -26,7 +26,7 @@ export class WorkoutChartComponent  implements OnInit {
     ],
     datasets: [
       {
-        data: [ 65, 59, 80, 81, 56, 55, 40 ],
+        data: [ 65, 59, 80, 81, 56, 55, 40, 65, 78, 12, 34, 67 ],
         fill: true,
         tension: 1,
         borderColor: 'black',
