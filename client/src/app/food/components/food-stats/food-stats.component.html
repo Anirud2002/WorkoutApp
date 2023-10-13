@@ -3,18 +3,14 @@
     <ion-card-subtitle>Graph</ion-card-subtitle>
   </ion-card-header>
   <ion-card-content>
-    <ion-list>
-      <ion-item class="ion-no-padding" *ngFor="let food of [1, 2, 3, 4, 5]; let i = index; let last = last;" [lines]="last && 'none'" button> <!-- FIX ME: MAKE THIS SLIDING-ITEM IN FUTURE -->
-        <ion-label>
-          <p>
-            {{i + 1}}. Chicken and Rice meal
-          </p>
-        </ion-label>
-        <ion-text slot="end">
-          780cal
-        </ion-text>
-      </ion-item>
-    </ion-list>
+    <div style="display: block;">
+      <canvas baseChart
+        [data]="barChartData"
+        [options]="barChartOptions"
+        [plugins]="barChartPlugins"
+        [legend]="barChartLegend"
+        [type]="'bar'">
+      </canvas>
+    </div>
   </ion-card-content>
 </ion-card>
-

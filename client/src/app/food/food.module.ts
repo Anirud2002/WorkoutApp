@@ -10,6 +10,7 @@ import { FoodPage } from './food.page';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { LoggedFoodComponent } from './components/logged-food/logged-food.component';
 import { FoodStatsComponent } from './components/food-stats/food-stats.component';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   imports: [
@@ -23,7 +24,8 @@ import { FoodStatsComponent } from './components/food-stats/food-stats.component
       outerStrokeColor: "#78C000",
       innerStrokeColor: "#C7E596",
       animationDuration: 300,
-    })
+    }),
+    NgChartsModule
   ],
   declarations: [
     FoodPage, 
