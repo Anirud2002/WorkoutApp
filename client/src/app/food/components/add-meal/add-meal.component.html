@@ -1,0 +1,21 @@
+<ion-item class="ion-margin-vertical" lines="none">
+  <ion-input
+    label="Meal"
+    labelPlacement="stacked"
+    type="text"
+    placeholder="Enter meal name"
+  ></ion-input>
+</ion-item>
+
+<ion-item class="foods-header font-medium mt-4 ion-no-padding" lines="none">
+  <ion-label slot="start">
+    <ion-text>Foods:</ion-text>
+  </ion-label>
+
+  <ion-button slot="end" color="tertiary" fill="clear">
+    Add <ion-icon name="add" slot="end"></ion-icon>
+  </ion-button>
+</ion-item>
+
+<!-- FOOD ITEMS -->
+<app-add-food></app-add-food>

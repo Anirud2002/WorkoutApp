@@ -81,9 +81,19 @@
   }
 
   /* ion-content */
-  ion-content, ion-toolbar {
+  ion-content, ion-toolbar{
     --background: var(--ion-color-secondary);
     --color: var(--ion-color-primary);
+  }
+
+  /* ion-modal */
+  ion-modal.modal-controller {
+    --background: var(--ion-color-primary);
+    
+    ion-content, ion-toolbar {
+      --background: var(--ion-color-primary);
+      --color: var(--ion-color-secondary);
+    }
   }
 
   /* ion-item */

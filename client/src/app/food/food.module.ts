@@ -11,6 +11,9 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { LoggedFoodComponent } from './components/logged-food/logged-food.component';
 import { FoodStatsComponent } from './components/food-stats/food-stats.component';
 import { NgChartsModule } from 'ng2-charts';
+import { AddFoodMealComponent } from './components/add-food-meal/add-food-meal.component';
+import { AddFoodComponent } from './components/add-food/add-food.component';
+import { AddMealComponent } from './components/add-meal/add-meal.component';
 
 @NgModule({
   imports: [
@@ -30,7 +33,10 @@ import { NgChartsModule } from 'ng2-charts';
   declarations: [
     FoodPage, 
     LoggedFoodComponent, 
-    FoodStatsComponent
+    FoodStatsComponent,
+    AddFoodMealComponent,
+    AddFoodComponent,
+    AddMealComponent
   ]
 })
 export class FoodPageModule {}

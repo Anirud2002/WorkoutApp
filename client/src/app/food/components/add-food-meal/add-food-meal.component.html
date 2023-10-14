@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="cancel()">Cancel</ion-button>
+    </ion-buttons>
+    <ion-title>Food/Meal</ion-title>
+    <ion-buttons slot="end">
+      <!-- <ion-button (click)="confirm()" [strong]="true">Add</ion-button> -->
+      <ion-button [strong]="true" [disabled]="true">Add</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+
+  <ion-segment value="food" (ionChange)="handleChangeSegment($event)">
+    <ion-segment-button value="food">
+      <ion-label>Food</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="meal">
+      <ion-label>Meal</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <!-- ADD FOOD -->
+  <app-add-food *ngIf="selectedSegment === 'food'"></app-add-food>
+
+  <!-- ADD MEAL -->
+  <app-add-meal *ngIf="selectedSegment === 'meal'"></app-add-meal>
+
+</ion-content>
