@@ -9,9 +9,14 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-        <ion-button class="sign-btn" fill="clear" color="primary">
+        <ion-button class="sign-btn" fill="clear" color="primary" slot="start">
           <ion-icon name="person-circle" slot="start"></ion-icon>
           sign in/sign up
+        </ion-button>
+
+        <ion-button slot="end" fill="clear" color="primary" size="small" (click)="toggleTheme()">
+          <ion-icon name="moon" slot="icon-only" *ngIf="selectedTheme === 'light'"></ion-icon>
+          <ion-icon name="sunny" slot="icon-only" *ngIf="selectedTheme === 'dark'"></ion-icon>
         </ion-button>
     </ion-toolbar>
   </ion-header>
