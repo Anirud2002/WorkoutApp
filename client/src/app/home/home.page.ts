@@ -14,9 +14,21 @@ export class HomePage implements OnInit {
 
   async ngOnInit() {
     this.selectedTheme = await this.themeService.getTheme(); 
-    console.log(this.selectedTheme);
+    this.subscribeToTheme();
+  }
+
+  /**
+   * Subscribe to theme to change the color for prgress texts
+   */
+  subscribeToTheme() {
+    this.themeService._themeObservable.subscribe(theme => {
+      this.selectedTheme = theme;
+    })
   }
   
+  /**
+   * Toggles theme between light and dark
+   */
   async toggleTheme() {
     this.selectedTheme = this.selectedTheme === "light" ? "dark" : "light";
     await this.themeService.applyTheme(this.selectedTheme);

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemeService } from '../../../shared/theme.service';
 
 @Component({
   selector: 'app-food-card',
@@ -6,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./food-card.component.scss'],
 })
 export class FoodCardComponent  implements OnInit {
+  selectedTheme: string = "system";
+  constructor(
+    private themeService: ThemeService
+  ) { }
 
-  constructor() { }
+  ngOnInit() {
+    this.subscribeToTheme();
+  }
 
-  ngOnInit() {}
+   /**
+   * Subscribe to theme to change the color for prgress texts
+   */
+   subscribeToTheme() {
+    this.themeService._themeObservable.subscribe(theme => {
+      this.selectedTheme = theme;
+    })
+  }
 
 }

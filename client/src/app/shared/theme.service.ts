@@ -1,12 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Preferences } from '@capacitor/preferences';
 import { StatusBar, Style } from '@capacitor/status-bar';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ThemeService {
   theme: string = "";
+  private _themeSubject: BehaviorSubject<string> = new BehaviorSubject<string>("");
+  _themeObservable: Observable<string> = this._themeSubject.asObservable();
+
   constructor() { }
 
   /**
@@ -30,6 +34,7 @@ export class ThemeService {
       case "light":
         document.body.setAttribute("color-theme", "light");
         this.setThemeToLocalStorage("light");
+        this._themeSubject.next("light");
         await StatusBar.setStyle({
           style: Style.Light
         });
@@ -37,6 +42,7 @@ export class ThemeService {
       case "dark":
         document.body.setAttribute("color-theme", "dark");
         this.setThemeToLocalStorage("dark");
+        this._themeSubject.next("dark");
         await StatusBar.setStyle({
           style: Style.Dark
         });
