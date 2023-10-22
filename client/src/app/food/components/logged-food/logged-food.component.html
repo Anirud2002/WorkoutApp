@@ -1,4 +1,4 @@
-<ion-card class="ion-no-margin">
+<ion-card class="ion-no-margin ion-margin-vertical">
   <ion-card-header>
     <ion-card-title>Logged food:</ion-card-title>
   </ion-card-header>
@@ -16,8 +16,7 @@
       </ion-item>
     </ion-list>
   </ion-card-content>
+  <ion-button size="small" fill="clear" color="tertiary" class="ion-margin-horizontal" (click)="openModal()">
+    Add Food or Meal
+  </ion-button>
 </ion-card>
-
-<ion-button expand="block" color="tertiary" class="ion-margin-vertical" (click)="openModal()">
-  Add Food or Meal
-</ion-button>

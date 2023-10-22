@@ -1,4 +1,4 @@
-<form [formGroup]="setForm">
+<form [formGroup]="setForm" class="ion-margin-vertical">
   <ion-item>
     <ion-label position="stacked">
       <p>Weight:</p>
@@ -13,5 +13,5 @@
 
     <ion-input type="number" formControlName="reps"></ion-input>
   </ion-item>
-  <ion-button class="ion-margin-horizontal" expand="block" [disabled]="setForm.invalid">Save</ion-button>
+  <ion-button class="ion-margin-horizontal" color="secondary" expand="block" [disabled]="setForm.invalid">Save</ion-button>
 </form>

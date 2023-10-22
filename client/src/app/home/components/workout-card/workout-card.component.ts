@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PopoverController } from '@ionic/angular';
+import { IonRouterOutlet, ModalController, PopoverController } from '@ionic/angular';
 import { AddSetPopoverComponent } from '../add-set-popover/add-set-popover.component';
+import { ChooseExerciseComponent } from '../choose-exercise/choose-exercise.component';
 
 @Component({
   selector: 'app-workout-card',
@@ -10,7 +11,9 @@ import { AddSetPopoverComponent } from '../add-set-popover/add-set-popover.compo
 export class WorkoutCardComponent  implements OnInit {
   selectedSet: any; //FIX ME
   constructor(
-    private popoverController: PopoverController
+    private outlet: IonRouterOutlet,
+    private popoverController: PopoverController,
+    private modalController: ModalController
   ) { }
 
   ngOnInit() {}
@@ -23,11 +26,18 @@ export class WorkoutCardComponent  implements OnInit {
       },
       mode: 'ios',
       showBackdrop: true,
-      // side: 'bottom',
-      // alignment: 'center',
-      // arrow: true
     });
     await popover.present();
+  }
+
+  async openExerciseModal() {
+    const modal = await this.modalController.create({
+      component: ChooseExerciseComponent,
+      presentingElement: this.outlet.nativeEl,
+      cssClass: 'modal-controller'
+    });
+
+    await modal.present();
   }
 
 }
