@@ -6,6 +6,15 @@
     placeholder="Enter food name"
   ></ion-input>
 </ion-item>
+<ion-item class="ion-margin-vertical" lines="none">
+  <ion-input
+    label="Calories"
+    labelPlacement="stacked"
+    type="number"
+    placeholder="Enter calories"
+  ></ion-input>
+  cal
+</ion-item>
 
 <ion-card class="ion-no-margin ion-margin-vertical">
   <ion-card-header>
@@ -26,16 +35,7 @@
           label="Number of servings"
           labelPlacement="floating"
           type="number"
-          slot="start"
-        ></ion-input>
-
-        <ion-select placeholder="Serving size" slot="end" interface="popover">
-          <ion-select-option value="apple">1unit</ion-select-option>
-          <ion-select-option value="apple">1g</ion-select-option>
-          <ion-select-option value="banana">1lbs</ion-select-option>
-          <ion-select-option value="orange">1oz</ion-select-option>
-          <ion-select-option value="orange">1ml</ion-select-option>
-        </ion-select>
+        ></ion-input>grams
       </ion-item>
     </ion-list>
   </ion-card-content>
