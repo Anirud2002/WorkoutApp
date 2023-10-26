@@ -1,13 +1,75 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>history</ion-title>
+    <ion-title>History</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">history</ion-title>
+      <ion-title size="large">History</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <div class="container w-full min-h-full rounded-t-3xl ion-padding">
+    <ion-button color="tertiary" (click)="openExerciseModal()">Choose exercise</ion-button>
+    <ion-card class="ion-no-margin ion-margin-vertical">
+      <ion-card-header>
+        <ion-card-subtitle>Bench press</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content class="ion-no-padding ion-padding-vertical">
+        <ion-accordion-group>
+          <ion-accordion *ngFor="let item of [1,2,3]" [value]="item">
+            <ion-item slot="header" color="light">
+              <ion-label>Today</ion-label>
+            </ion-item>
+            <div class="ion-padding-horizontal" slot="content">
+              <ion-item class="ion-no-padding" *ngFor="let set of [1, 2, 3, 4]; let i = index; let last = last" [lines]="last && 'none'">
+                <ion-label class="ion-text-wrap">
+                    <p>
+                      120lbs
+                    </p>
+                </ion-label>
+                <ion-text slot="end">
+                  13 reps
+                </ion-text>
+              </ion-item>
+            </div>
+          </ion-accordion>
+        </ion-accordion-group>
+
+        <div class="flex justify-center">
+          <ion-button fill="clear" size="small" color="tertiary">Load more...</ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="ion-no-margin ion-margin-vertical">
+      <ion-card-header>
+        <ion-card-subtitle>Statistics</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content class="ion-no-padding ion-padding-horizontal">
+        <!-- DATE TIME PICKER (MONTH / YEAR) -->
+        <ion-item class="ion-no-padding mb-2" lines="none">
+          <ion-datetime-button datetime="datetime" slot="start"></ion-datetime-button>
+          <ion-popover [keepContentsMounted]="true">
+            <ng-template>
+              <!-- <ion-datetime id="datetime" presentation="month-year" (ionChange)="handleDates($event)"></ion-datetime> -->
+              <ion-datetime id="datetime" presentation="year"></ion-datetime>
+            </ng-template>
+          </ion-popover>
+        </ion-item>
+
+        <div style="display: block;">
+          <canvas baseChart width="400" height="400"
+            [type]="'line'"
+            [data]="lineChartData"
+            [options]="lineChartOptions"
+            [legend]="false">
+          </canvas>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
