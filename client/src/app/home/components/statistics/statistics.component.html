@@ -1,24 +1,14 @@
 <ion-item class="font-medium mt-4 statistics ion-no-padding ion-no-margin" lines="none">
   <ion-label>
-    <ion-text>Statistics</ion-text>
+    <ion-text>Streak</ion-text>
   </ion-label>
 </ion-item>
 
 <ion-card class="ion-no-margin">
-
-  <ion-card-header>
-    <ion-segment value="streak" (ionChange)="handleChangeStatisticsType($event)">
-      <ion-segment-button value="streak">
-        <ion-label>Streak</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="chart">
-        <ion-label>Chart</ion-label>
-      </ion-segment-button>
-    </ion-segment>
-  </ion-card-header>
-
   <ion-card-content>
-    <app-streak *ngIf="selectedStatsType === 'streak'"></app-streak>
-    <app-workout-chart *ngIf="selectedStatsType === 'chart'"></app-workout-chart>
+    <app-streak></app-streak>
+
+    <!-- TODO: MIGHT NEED TO DELETE THE CHART BECAUSE IT CAN BE UNNECESSARY-->
+    <!-- <app-workout-chart *ngIf="selectedStatsType === 'chart'"></app-workout-chart> -->
   </ion-card-content>
 </ion-card>
