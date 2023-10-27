@@ -12,15 +12,18 @@
   </ion-header>
 
   <div class="container w-full min-h-full rounded-t-3xl ion-padding">
-    <ion-button color="tertiary" (click)="openExerciseModal()">Choose exercise</ion-button>
+    <ion-item class="choose-exer-btn ion-no-padding" lines="none">
+      <ion-button color="tertiary" size="small" slot="end" (click)="openExerciseModal()">Choose exercise</ion-button>
+    </ion-item>
+    
     <ion-card class="ion-no-margin ion-margin-vertical">
       <ion-card-header>
         <ion-card-subtitle>Bench press</ion-card-subtitle>
       </ion-card-header>
 
       <ion-card-content class="ion-no-padding ion-padding-vertical">
-        <ion-accordion-group>
-          <ion-accordion *ngFor="let item of [1,2,3]" [value]="item">
+        <ion-accordion-group [value]="['1']">
+          <ion-accordion *ngFor="let item of [1,2,3]; let first = first" [value]="item" >
             <ion-item slot="header" color="light">
               <ion-label>Today</ion-label>
             </ion-item>
