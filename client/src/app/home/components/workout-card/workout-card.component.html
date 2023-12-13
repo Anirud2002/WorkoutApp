@@ -37,21 +37,7 @@
 
 </ion-card>
 
-<ion-grid class="ion-no-padding ion-no-margin ">
-  <ion-row class="flex space-x-2 justify-center">
-    <ion-col size="5">
-      <ion-button expand="block" class="ion-margin-vertical" color="tertiary">
-        <ion-icon name="play" slot="start"></ion-icon>
-        <ion-text slot="end">
-          4:00 <small>min</small>
-        </ion-text>
-      </ion-button>
-    </ion-col>
-    <ion-col size="5">
-      <ion-button expand="block" class="ion-margin-vertical" color="secondary" (click)="openExerciseModal()">
-        <ion-text slot="start" color="primary">Next</ion-text>
-        <ion-icon name="barbell-outline" slot="end" color="primary"></ion-icon>
-      </ion-button>
-    </ion-col>
-  </ion-row>
-</ion-grid>
+<ion-button expand="block" class="ion-margin-vertical" color="tertiary" (click)="openExerciseModal()">
+  <ion-icon name="barbell-outline" slot="start" color="primary"></ion-icon>
+  <ion-text slot="end" color="primary">Choose Exercise</ion-text>
+</ion-button>
